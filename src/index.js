@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import {BrowserRouter} from 'react-router-dom';
+import Rainbow from './components/Rainbow'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+
+const Root = () => (
+  <BrowserRouter>
+    <Rainbow></Rainbow>
+  </BrowserRouter>
 );
+
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(
+    <Root />,
+    document.getElementById('root'),
+  );
+});
